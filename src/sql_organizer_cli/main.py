@@ -19,10 +19,9 @@ def echo(message: Annotated[str, typer.Argument(help="Message to echo")]) -> Non
 
 @app.command()
 def search(
-    path: Annotated[str, typer.Argument(help="search path")] = ".",
+    path: Annotated[Path, typer.Argument(help="search path")] = Path("."),
     extension: Annotated[list[str], typer.Option("--extension", "-e")] = ["sql"],
 ) -> None:
-    search_path = Path(path)
     try:
         extensions = [FileExtension(extension=e) for e in extension]
     except ValidationError:
@@ -30,6 +29,6 @@ def search(
             "[bold red]Value Error![/bold red] Extension should not be an empty string"
         )
         return
-    files = get_all_sql_files(search_path, extensions)
+    files = get_all_sql_files(path, extensions)
     for file in files:
         rich.print(file.absolute())

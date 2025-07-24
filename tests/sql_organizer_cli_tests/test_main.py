@@ -23,7 +23,8 @@ def test_search(cli_runner, tmp_path):
     result = cli_runner.invoke(
         app, ["search", str(tmp_path.absolute()), "-e", "txt", "-e", "sql"]
     )
+    output = result.output.replace("\n", "")
     assert result.exit_code == 0
-    assert "test.sql" in result.output
-    assert "other.txt" in result.output
-    assert "bad.py" not in result.output
+    assert "test.sql" in output
+    assert "other.txt" in output
+    assert "bad.py" not in output
