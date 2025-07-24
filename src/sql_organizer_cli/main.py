@@ -15,7 +15,7 @@ app = typer.Typer()
 
 
 @app.command()
-def search(
+def combine(
     path: Annotated[
         Path, typer.Argument(help="path, where the SQL files are located")
     ] = Path("."),
