@@ -66,4 +66,6 @@ def get_standard_formatter(remove_comments: bool) -> SqlFileFormatter:
         )
         .and_(SkipLine())
         .and_(BreakLine())
+        .and_(SkipLine())
+        .and_(SkipLine())
     )
