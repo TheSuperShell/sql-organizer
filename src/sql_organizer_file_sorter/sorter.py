@@ -7,11 +7,11 @@ from typing import Protocol
 NUMBERS_REGEX = re.compile(r"[0-9]+")
 
 
-class Comparable[CT](Protocol):
+class Comparable[CT: Comparable](Protocol):
     def __lt__(self: CT, other: CT, /) -> bool: ...
 
 
-class SortStrategy[T: Comparable](ABC):
+class SortStrategy[T: Comparable[int | str]](ABC):
     @abstractmethod
     def get_sort_order(self, path: Path) -> T: ...
 
@@ -43,7 +43,7 @@ SORTERS: dict[str, SortStrategy[str | int]] = {
 def sort_paths(
     paths: Sequence[Path], sorting_strategies: Sequence[SortStrategy[int | str]]
 ) -> list[Path]:
-    assert len(sorting_strategies) > 1, (
+    assert len(sorting_strategies) >= 1, (
         "Sorting strategies should contain at least 1 value"
     )
     return sorted(
