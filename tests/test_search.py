@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from sql_organizer_search_engine.search import FileExtension, get_all_sql_files
+from sql_organizer.search import FileExtension, get_all_sql_files
 
 
 def test_file_extension_min_length():

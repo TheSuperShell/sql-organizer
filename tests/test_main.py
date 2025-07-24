@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from typer.testing import CliRunner
 
-from sql_organizer_cli.main import app
+from sql_organizer.main import app
 
 
 @pytest.fixture(scope="module")

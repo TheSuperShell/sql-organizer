@@ -1,7 +1,7 @@
 import pytest
 
-from sql_organizer_file.file import SqlFile
-from sql_organizer_file_formatter.file_formatter import (
+from sql_organizer.file import SqlFile
+from sql_organizer.file_formatter import (
     BreakLine,
     FormatterCombination,
     NameFormatter,

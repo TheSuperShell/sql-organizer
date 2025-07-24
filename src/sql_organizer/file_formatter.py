@@ -2,7 +2,7 @@ import re
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from sql_organizer_file.file import SqlFile
+from sql_organizer.file import SqlFile
 
 COMMENT_REGEX = re.compile(r"--\s*use", flags=re.I + re.M)
 

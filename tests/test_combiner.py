@@ -1,6 +1,6 @@
-from sql_organizer_file.file import SqlFile
-from sql_organizer_file_combiner.combiner import combine_files
-from sql_organizer_file_formatter.file_formatter import PlainSqlText
+from sql_organizer.combiner import combine_files
+from sql_organizer.file import SqlFile
+from sql_organizer.file_formatter import PlainSqlText
 
 
 def test_combiner(tmp_path):

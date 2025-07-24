@@ -5,11 +5,11 @@ import rich
 import typer
 from pydantic import ValidationError
 
-from sql_organizer_file.file import SqlFile
-from sql_organizer_file_combiner.combiner import combine_files
-from sql_organizer_file_formatter.file_formatter import get_standard_formatter
-from sql_organizer_file_sorter.sorter import SORTERS, sort_paths
-from sql_organizer_search_engine.search import FileExtension, get_all_sql_files
+from sql_organizer.combiner import combine_files
+from sql_organizer.file import SqlFile
+from sql_organizer.file_formatter import get_standard_formatter
+from sql_organizer.search import FileExtension, get_all_sql_files
+from sql_organizer.sorter import SORTERS, sort_paths
 
 app = typer.Typer()
 

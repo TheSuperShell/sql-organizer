@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from sql_organizer_file_sorter.sorter import (
+from sql_organizer.sorter import (
     FirstNumberSort,
     LastFolderSort,
     LastNumberSort,

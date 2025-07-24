@@ -1,4 +1,4 @@
-from sql_organizer_file.file import SqlFile
+from sql_organizer.file import SqlFile
 
 
 def test_sql_file_from_path(tmp_path):

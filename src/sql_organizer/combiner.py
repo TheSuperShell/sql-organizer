@@ -1,8 +1,8 @@
 from collections.abc import Sequence
 from pathlib import Path
 
-from sql_organizer_file.file import SqlFile
-from sql_organizer_file_formatter.file_formatter import SqlFileFormatter
+from sql_organizer.file import SqlFile
+from sql_organizer.file_formatter import SqlFileFormatter
 
 
 def combine_files(
