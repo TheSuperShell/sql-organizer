@@ -21,10 +21,24 @@ def test_search(cli_runner, tmp_path):
     files = ["test.sql", "folder/other.txt", "bad.py"]
     _create_files(tmp_path, files)
     result = cli_runner.invoke(
-        app, ["search", str(tmp_path.absolute()), "-e", "txt", "-e", "sql"]
+        app, [str(tmp_path.absolute()), "-e", "txt", "-e", "sql"]
     )
     output = result.output.replace("\n", "")
     assert result.exit_code == 0
     assert "test.sql" in output
     assert "other.txt" in output
     assert "bad.py" not in output
+
+
+def test_search_invalid_sorter(cli_runner):
+    result = cli_runner.invoke(app, ["-so", "a"])
+    assert result.exit_code == 0
+    assert result.output.strip() == "Value Error! sorter a is invalid"
+
+
+def test_search_empty_extension(cli_runner):
+    result = cli_runner.invoke(app, ["-e", ""])
+    assert result.exit_code == 0
+    assert (
+        result.output.strip() == "Value Error! Extension should not be an empty string"
+    )
