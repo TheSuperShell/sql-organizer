@@ -9,6 +9,18 @@ dependencies = [
     "rich>=14.0.0",
     "typer>=0.16.0",
 ]
+authors = [
+    {name = "Steven Rudenko", email = "steven.gucum@gmail.com"}
+]
+license = { file = "LICENSE" }
+keywords = ["sql", "os"]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 4 - Beta",
+]
+
+[project.urls]
+Repository = "https://github.com/TheSuperShell/sql-organizer"
 
 [tool.pytest.ini_options]
 pythonpath = "src/*"
