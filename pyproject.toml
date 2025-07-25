@@ -1,6 +1,6 @@
 [project]
 name = "sql-organizer"
-version = "1.0.2"
+version = "1.0.3"
 description = "This is a simple python CLI tool to organize .sql files. This is a useful tool for my work, but I decided to share it as a project example"
 readme = "README.md"
 requires-python = ">=3.12"
