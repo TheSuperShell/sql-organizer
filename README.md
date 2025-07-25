@@ -1,22 +1,18 @@
 ```
-  /$$$$$$   /$$$$$$  /$$              /$$$$$$                                          /$$                              
- /$$__  $$ /$$__  $$| $$             /$$__  $$                                        |__/                              
-| $$  \__/| $$  \ $$| $$            | $$  \ $$  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$ /$$$$$$$$  /$$$$$$   /$$$$$$ 
-|  $$$$$$ | $$  | $$| $$            | $$  | $$ /$$__  $$ /$$__  $$ |____  $$| $$__  $$| $$|____ /$$/ /$$__  $$ /$$__  $$
- \____  $$| $$  | $$| $$            | $$  | $$| $$  \__/| $$  \ $$  /$$$$$$$| $$  \ $$| $$   /$$$$/ | $$$$$$$$| $$  \__/
- /$$  \ $$| $$/$$ $$| $$            | $$  | $$| $$      | $$  | $$ /$$__  $$| $$  | $$| $$  /$$__/  | $$_____/| $$      
-|  $$$$$$/|  $$$$$$/| $$$$$$$$      |  $$$$$$/| $$      |  $$$$$$$|  $$$$$$$| $$  | $$| $$ /$$$$$$$$|  $$$$$$$| $$      
- \______/  \____ $$$|________/       \______/ |__/       \____  $$ \_______/|__/  |__/|__/|________/ \_______/|__/      
-                \__/                                     /$$  \ $$                                                      
-                                                        |  $$$$$$/                                                      
-                                                         \______/                                                       
+  ____   ___  _        ___                        _              
+ / ___| / _ \| |      / _ \ _ __ __ _  __ _ _ __ (_)_______ _ __ 
+ \___ \| | | | |     | | | | '__/ _` |/ _` | '_ \| |_  / _ \ '__|
+  ___) | |_| | |___  | |_| | | | (_| | (_| | | | | |/ /  __/ |   
+ |____/ \__\_\_____|  \___/|_|  \__, |\__,_|_| |_|_/___\___|_|   
+                                |___/                            
+
 ```
 By: Steven Rudenko (steven.gucum@gmail.com)
 
 This project is inspired by a problem I had at work where I would get billion seperate `.sql` files to execute one by one and had to manually copy them into a one worksheet. This CLI tool automates this process. It also sorts the files based on chosen strategies (I will introduce more in the future). Ofcourse this tool can be used with any file format, but since this is manly used for my SQL problem - I named it SQL Organizer :D
 
 
-## Instalation
+## Installation
 
 - Windows
 
